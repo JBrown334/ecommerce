@@ -1,3 +1,3 @@
 select productname, productprice, productimage, productdescription
 from products
-where id = $1;
+where productid = $1;

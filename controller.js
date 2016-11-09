@@ -1,27 +1,20 @@
-var app = require('./db');
+var db = require('./db');
 
 module.exports = {
 
   createRequest: function(req, res){
-    var firstName = req.body.c_firstname;
-    var lastName = req.body.c_lastname;
-    var email = req.body.c_email;
-    var phone = req.body.c_phone;
-    var rfi = req.body.rfi_description;
-    db.create_request([firstName, lastName, email, phone, rfi], res.status(200).send('Your request has been submitted!'));
+    var rfiParams = [req.body.firstname, req.body.lastname, req.body.email, req.body.phone, req.body.description];
+    db.create_request(rfiParams, res.status(200).send('Your request has been submitted!'));
   },
 
   createProduct: function(req, res){
-    var name = req.body.productname;
-    var price = req.body.productprice;
-    var image = req.body.productimage;
-    var desc = req.body.productdescription;
-    db.create_product([name, price, image, desc], res.status(200).send('Product created!'));
+    var newProd = [req.body.productname, req.body.productprice, req.body.productimage, req.body.productdescription]
+    db.create_product(newProd, res.status(200).send('Product created!'));
   },
 
   getProduct: function(req, res){
-    var id = req.query.productid;
-    db.read_product([id], function(err, product){
+    var params = [req.params.id];
+    db.read_product(params, function(err, product){
       res.status(200).send(product);
     });
   },
@@ -33,17 +26,14 @@ module.exports = {
   },
 
   updateProduct: function(req, res){
-    var id = req.query.productid;
-    var description = req.query.productdescription;
-    var name = req.query.productname;
-    var img = req.query.productimage;
-    db.update_product([id, description, name, img], function(err, product){
+    var updateParams = [req.param.id, req.param.description, req.param.name, req.param.img];
+    db.update_product(updateParams, function(err, product){
       res.status(200).send('Product updated!');
     });
   },
 
   deleteProduct: function(req, res){
-    var id = req.query.id;
+    var id = req.param.id;
     db.delete_product([id], function(err, product){
       res.status(200).send('Product deleted!');
     });
