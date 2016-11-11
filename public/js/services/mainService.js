@@ -5,7 +5,7 @@ angular.module('ecommerce')
       return $http({
         method: 'POST',
         url: 'http://localhost:8888/rfi',
-        data:rfi
+        data: rfi
       }).then(function(response){
         return response.data;
       });

@@ -13,20 +13,32 @@ angular.module('ecommerce')
       });
     };
 
-    $scope.getProduct = mainService.getProduct().then(function(response){
+    $scope.getProduct = function(){
+      mainService.getProduct().then(function(response){
       $scope.product = response.data;
-    });
+      });
+    };
 
-    $scope.getProducts = mainService.getProducts().then(function(response){
+    $scope.getProducts = function(){
+      mainService.getProducts().then(function(response){
       $scope.products = response.data;
-    });
+      });
+    };
 
-    $scope.updateProduct = mainService.updateProduct().then(function(response){
+    console.log($scope.products);
+
+    $scope.getProducts();
+
+    $scope.updateProduct = function(){
+      mainService.updateProduct().then(function(response){
       alert(response);
     });
+  };
 
-    $scope.deleteProduct = mainService.deleteProduct().then(function(response){
+    $scope.deleteProduct = function(){
+      mainService.deleteProduct().then(function(response){
       alert(response);
     });
+  };
 
   });
