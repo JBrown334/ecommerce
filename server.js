@@ -1,28 +1,33 @@
 //required dependencies
 var express = require('express'),
     cors = require('cors'),
-    bodyParser = require('body-parser')
+    bodyParser = require('body-parser'),
     controller = require('./controller');
+
 
 //initialize express, and exporting so I can use db in different files
 var app = express();
 
 
 app.use(express.static(__dirname + '/public'));
-console.log(__dirname);
+
 //middleware
 app.use(bodyParser.json());
 app.use(cors());
 
+
+
 //customer endpoints
-app.post('/rfi', controller.createRequest);
-app.get('/product/:id', controller.getProduct);
-app.get('/products', controller.getProducts);
-app.delete('/product/:id', controller.deleteProduct);
+app.post('/api/rfi', controller.createRequest);
+app.get('/api/product/:id', controller.getProduct);
+app.get('/api/products', controller.getProducts);
+app.delete('/api/product/:id', controller.deleteProduct);
 
 //admin endpoints
-app.post('/product', controller.createProduct);
-app.put('/product/:id', controller.updateProduct);
+app.post('/api/product', controller.createProduct);
+app.put('/api/product/:id', controller.updateProduct);
+
+controller.getProducts();
 
 //port
 app.listen(8888, function(){

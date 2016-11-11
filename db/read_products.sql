@@ -1,2 +1,2 @@
-select productid, productname, productprice, productimage, productdescription
+select *
 from products;

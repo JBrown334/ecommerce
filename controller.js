@@ -20,10 +20,24 @@ module.exports = {
   },
 
   getProducts: function(req, res){
-    db.read_products(function(err, products){
-      res.status(200).send(products);
-    });
-  },
+        var result = db.read_products(function(products){
+     return products;
+   });
+res.send(result);
+ },
+
+  // getProducts: function(req, res){
+  //   db.read_products(function(products){
+  //     console.log(products);
+  //     res.send(products);
+  //   });
+  // },
+ //  getProducts(req, res) {
+ //   db.read_products((err, product) => {
+ //     console.log(err, product);
+ //     res.send(product);
+ //   });
+ // },
 
   updateProduct: function(req, res){
     var updateParams = [req.param.id, req.param.description, req.param.name, req.param.img];

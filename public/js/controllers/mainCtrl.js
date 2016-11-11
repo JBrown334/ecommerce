@@ -24,9 +24,7 @@ angular.module('ecommerce')
       $scope.products = response.data;
       });
     };
-
-    console.log($scope.products);
-
+    
     $scope.getProducts();
 
     $scope.updateProduct = function(){

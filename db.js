@@ -1,5 +1,6 @@
 var massive = require('massive');
-    connectionString = 'postgres://postgres:Golden@ge33@localhost/ecommerce_project',
-    massiveInstance = massive.connectSync({connectionString : connectionString});
+
+var connectionString = 'postgres://postgres:Golden@ge33@localhost/ecommerce_project';
+var massiveInstance = massive.connectSync({connectionString : connectionString});
 
 module.exports = massiveInstance;
