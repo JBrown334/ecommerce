@@ -1,8 +1,8 @@
 angular.module('ecommerce')
   .controller('mainCtrl', function($scope, mainService){
 
-    $scope.createRequest = function(rfi){
-      mainService.createRequest(rfi).then(function(response){
+    $scope.createRequest = function($1){
+      mainService.createRequest($1).then(function(response){
         alert(response);
       });
     };
@@ -24,7 +24,7 @@ angular.module('ecommerce')
       $scope.products = response.data;
       });
     };
-    
+
     $scope.getProducts();
 
     $scope.updateProduct = function(){

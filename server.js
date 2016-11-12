@@ -4,18 +4,16 @@ var express = require('express'),
     bodyParser = require('body-parser'),
     controller = require('./controller');
 
-
 //initialize express, and exporting so I can use db in different files
 var app = express();
-
 
 app.use(express.static(__dirname + '/public'));
 
 //middleware
 app.use(bodyParser.json());
-app.use(cors());
-
-
+app.use(cors({
+  origin: 'http://localhost:8888'
+}));
 
 //customer endpoints
 app.post('/api/rfi', controller.createRequest);
@@ -27,7 +25,7 @@ app.delete('/api/product/:id', controller.deleteProduct);
 app.post('/api/product', controller.createProduct);
 app.put('/api/product/:id', controller.updateProduct);
 
-controller.getProducts();
+// controller.getProducts();
 
 //port
 app.listen(8888, function(){

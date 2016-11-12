@@ -3,8 +3,10 @@ var db = require('./db');
 module.exports = {
 
   createRequest: function(req, res){
-    var rfiParams = [req.body.firstname, req.body.lastname, req.body.email, req.body.phone, req.body.description];
-    db.create_request(rfiParams, res.status(200).send('Your request has been submitted!'));
+    var rfiParams = [req.body.c_firstname, req.body.c_lastname, req.body.c_email, req.body.c_phone, req.body.c_description];
+    db.create_request(rfiParams, function(error, rfi){
+      res.status(200).send('Your request has been submitted!');
+    });
   },
 
   createProduct: function(req, res){
@@ -20,24 +22,13 @@ module.exports = {
   },
 
   getProducts: function(req, res){
-        var result = db.read_products(function(products){
-     return products;
-   });
-res.send(result);
- },
+    db.read_products(function(err, products){
+      console.log(err);
+      console.log(products);
+      res.status(200).send(products);
+    });
+  },
 
-  // getProducts: function(req, res){
-  //   db.read_products(function(products){
-  //     console.log(products);
-  //     res.send(products);
-  //   });
-  // },
- //  getProducts(req, res) {
- //   db.read_products((err, product) => {
- //     console.log(err, product);
- //     res.send(product);
- //   });
- // },
 
   updateProduct: function(req, res){
     var updateParams = [req.param.id, req.param.description, req.param.name, req.param.img];
