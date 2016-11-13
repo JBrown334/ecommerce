@@ -1,12 +1,14 @@
 
 <div class="container">
 
+  <img ng-src="https://static.pexels.com/photos/34079/pexels-photo.jpg" class="img-responsive" />
 
-<div ng-repeat="product in products" class="">
+<div ng-repeat="product in products" class="col-sm-4">
 
-<div>
-  {{product.productname}}
+  <div>{{product.productname}}</div>
+  <img class="img-responsive" ng-src="{{product.productimage}}" />
+
+
 </div>
 
-</div>
 </div>

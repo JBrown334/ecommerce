@@ -1,2 +1,2 @@
-delete products
-  where id = $1;
+delete from products
+  where productid = $1;

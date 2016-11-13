@@ -1,8 +1,8 @@
 angular.module('ecommerce')
   .controller('mainCtrl', function($scope, mainService){
 
-    $scope.createRequest = function($1){
-      mainService.createRequest($1).then(function(response){
+    $scope.createRequest = function(rfi){
+      mainService.createRequest(rfi).then(function(response){
         alert(response);
       });
     };

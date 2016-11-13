@@ -22,8 +22,8 @@ app.get('/api/products', controller.getProducts);
 app.delete('/api/product/:id', controller.deleteProduct);
 
 //admin endpoints
-app.post('/api/product', controller.createProduct);
-app.put('/api/product/:id', controller.updateProduct);
+app.post('/api/addproduct', controller.createProduct);
+app.put('/api/product', controller.updateProduct);
 
 // controller.getProducts();
 

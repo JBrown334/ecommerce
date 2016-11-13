@@ -14,7 +14,7 @@ angular.module('ecommerce')
     this.createProduct = function(prod)  {
       return $http({
         method: 'POST',
-        url: 'http://localhost:8888/api/product',
+        url: 'http://localhost:8888/api/addproduct',
         data: prod
       }).then(function(response){
         return response.data;

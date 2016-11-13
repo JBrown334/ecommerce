@@ -2,19 +2,42 @@
 <html ng-app="ecommerce">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="./style.css" media="screen" title="no title">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <title></title>
   </head>
   <body ng-controller="mainCtrl">
 
     <div class="header">
 
+      <ul class="snip1555">
+    <li class="current"><a ui-sref="home" data-hover="Home">OLD FRIEND</a></li>
+    <li><a ui-sref="shop" data-hover="About Us">SHOP</a></li>
+    <li><a ui-sref="journal" data-hover="Blog">JOURNAL</a></li>
+    <li><a ui-sref="rfi" data-hover="Services">CUSTOM REQUEST</a></li>
+      </ul>
+
     </div>
+
+      <!-- <div class="col-6"><a ui-sref="home">OLD FRIEND</a></div>
+        <div class="header-nav" class="col-6">
+          <div><a ui-sref="shop">SHOP</a></div>
+          <div><a ui-sref="journal">JOURNAL</a></div>
+          <div><a ui-sref="rfi">CUSTOM REQUEST</a></div>
+        </div>
+    </div> -->
 
     <ui-view></ui-view>
 
     <div class="footer">
 
     </div>
+
+  <script src="https://code.jquery.com/jquery-3.1.1.js"
+    integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+    crossorigin="anonymous"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.js"></script>

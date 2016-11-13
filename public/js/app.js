@@ -1,22 +1,28 @@
 angular.module('ecommerce', ['ui.router'])
+
   .config(function($stateProvider, $urlRouterProvider){
 
     $stateProvider
 
       .state('home', {
-        url: ('/'),
+        url: '/',
         templateUrl: '../views/home.html'
       })
 
-      .state('about', {
-                url:'/about',
-                templateUrl: '../views/about.html'
-            });
+      .state('journal', {
+        url: '/journal',
+        templateUrl: '../views/journal.html'
+            })
 
-    //products home
-    //selected product
-    //about
-    //request
+      .state('rfi', {
+        url: '/customrequest',
+        templateUrl: '../views/rfi.html'
+      })
+
+      .state('shop', {
+        url: '/shop',
+        templateUrl: '../views/shop.html'
+      });
 
 
 

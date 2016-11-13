@@ -1,3 +1,3 @@
 update products
-  set description = $1, name = $2, image = $3
-  where id = $4;
+  set productdescription = $1, productname = $2, productimage = $3
+  where productid = $4;
