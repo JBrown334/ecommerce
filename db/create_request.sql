@@ -1,1 +1,1 @@
-insert into rfi (c_firstname, c_lastname, C_email, C_phone, rfi_description) values ($1, $2, $3, $4, $5);
+insert into rfi (c_name, c_email, c_phone, rfi_description) values ($1, $2, $3, $4);

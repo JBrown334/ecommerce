@@ -2,13 +2,13 @@
 <fieldset>
 
 <!-- Form Name -->
-<legend>Custom Request</legend>
+<legend class="request-form-name">Custom Request</legend>
 
 <!-- Text input-->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="name">Name</label>
+  <label class="col-md-4 control-label" for="name" >Name</label>
   <div class="col-md-4">
-  <input id="name" name="name" placeholder="name" class="form-control input-md" required="" type="text">
+  <input id="name" name="name" placeholder="name" class="form-control input-md" required="" type="text" ng-model="rfiDetails.c_name">
 
   </div>
 </div>
@@ -17,24 +17,24 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="contact#">Email</label>
   <div class="col-md-4">
-  <input id="contact#" name="contact#" placeholder="(xxx) xxx-xxxx" class="form-control input-md" required="" type="text">
+  <input id="contact#" name="e-mail" placeholder="ex: you@emailaddress.com" class="form-control input-md" required="" type="text" ng-model="rfiDetails.c_email">
 
   </div>
 </div>
 
 <!-- Text input-->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="e-mail">Phone</label>
+  <label class="col-md-4 control-label" for="phone">Phone</label>
   <div class="col-md-4">
-  <input id="e-mail" name="e-mail" placeholder="ex: you@emailaddress.com" class="form-control input-md" required="" type="text">
+  <input id="e-mail" name="contact#" placeholder="(xxx)-xxx-xxxx" class="form-control input-md" required="" type="text" ng-model="rfiDetails.c_phone">
 
   </div>
 </div>
 
 
 <!-- Select Basic -->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="selectbasic">Request Type</label>
+<!-- <div class="form-group">
+  <label class="col-md-4 control-label" for="selectbasic" ng-model="rfiDetails.rfi_type">Request Type</label>
   <div class="col-md-4">
     <select id="selectbasic" name="selectbasic" class="form-control">
       <option value="Logo Design">Mugs</option>
@@ -42,13 +42,13 @@
       <option value="*Other">*Other</option>
     </select>
   </div>
-</div>
+</div> -->
 
 <!-- Textarea -->
 <div class="form-group">
   <label class="col-md-4 control-label" for="textarea">Description</label>
   <div class="col-md-4">
-    <textarea class="form-control" id="textarea" name="textarea"></textarea>
+    <textarea class="form-control" id="textarea" name="textarea" ng-model="rfiDetails.rfi_description"></textarea>
   </div>
 </div>
 
@@ -56,9 +56,12 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="submit">Submit</label>
   <div class="col-md-4">
-    <button id="submit" name="submit" class="btn btn-success">Submit</button>
+    <button id="submit" name="submit" class="btn btn-success" ng-click="createRequest(rfiDetails)">Submit</button>
   </div>
 </div>
 
 </fieldset>
 </form>
+<pre>
+  {{rfiDetails}}
+</pre>

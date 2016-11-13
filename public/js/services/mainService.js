@@ -2,12 +2,11 @@ angular.module('ecommerce')
   .service('mainService', function($http)  {
 
     this.createRequest = function(rfi)  {
+      console.log(rfi);
       return $http({
         method: 'POST',
         url: 'http://localhost:8888/api/rfi',
         data: rfi
-      }).then(function(response){
-        return response.data;
       });
     },
 

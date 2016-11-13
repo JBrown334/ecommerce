@@ -3,7 +3,7 @@ var db = require('./db');
 module.exports = {
 
   createRequest: function(req, res){
-    var rfiParams = [req.body.c_firstname, req.body.c_lastname, req.body.c_email, req.body.c_phone, req.body.rfi_description];
+    var rfiParams = [req.body.c_name, req.body.c_email, req.body.c_phone, req.body.rfi_description];
     db.create_request(rfiParams, function(err, rfi){
       console.log(rfi);
       console.log(err);

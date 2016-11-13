@@ -1,4 +1,11 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
 
+.request-form-name {
+  text-align: center;
+}
 
 .snip1555 {
   font-family: 'Muli', Arial, sans-serif;
