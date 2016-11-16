@@ -19,6 +19,12 @@ angular.module('ecommerce', ['ui.router'])
         templateUrl: '../views/rfi.html'
       })
 
+      .state('product', {
+        url: '/product/:id',
+        templateUrl: '../views/product.html',
+        controller: 'productCtrl'
+      })
+
       .state('shop', {
         url: '/shop',
         templateUrl: '../views/shop.html'

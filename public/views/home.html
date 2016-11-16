@@ -5,10 +5,13 @@
 
 <div ng-repeat="product in products" class="col-sm-4">
 
-  <div>{{product.productname}}</div>
-  <img class="img-responsive" ng-src="{{product.productimage}}" />
 
-
+  <a ui-sref="product({id: product.productid})">
+    <div>{{product.productname}}</div>
+  </a>
+  <a ui-sref="product({id: product.productid})">
+<img class="img-responsive" ng-src="{{product.productimage}}" />
+  </a>
 </div>
 
 </div>

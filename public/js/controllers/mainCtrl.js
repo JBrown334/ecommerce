@@ -16,11 +16,9 @@ angular.module('ecommerce')
       });
     };
 
-    $scope.getProduct = function(){
-      mainService.getProduct().then(function(response){
-      $scope.product = response.data;
-      });
-    };
+  
+
+
 
     $scope.getProducts = function(){
       mainService.getProducts().then(function(response){

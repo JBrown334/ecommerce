@@ -20,13 +20,6 @@ angular.module('ecommerce')
       });
     },
 
-    this.getProduct = function(id)  {
-      return $http({
-        method: 'GET',
-        url: 'http://localhost:8888/api/product/:id'
-      });
-    },
-
     this.getProducts = function()  {
       return $http({
         method: 'GET',
@@ -37,14 +30,14 @@ angular.module('ecommerce')
     this.updateProduct = function(id)  {
       return $http({
         method: 'PUT',
-        url: 'http://localhost:8888/api/product/:id'
+        url: 'http://localhost:8888/api/product/' + id
       });
     },
 
     this.deleteProduct = function(id)  {
       return $http({
         method: 'DELETE',
-        url: 'http://localhost:8888/product/:id'
+        url: 'http://localhost:8888/product/' + id
       })
     };
 
