@@ -7,9 +7,47 @@
   text-align: center;
 }
 
+.logo {
+  margin-top: 24px;
+  float: left;
+  font-weight: bold;
+  margin-left: 130px;
+  text-decoration: underline;
+  font-family: 'Architects Daughter', cursive;
+  font-size: 30px;
+  color: #3d393d;
+}
+
+.nav {
+  float: right;
+  display: flex;
+  align-items: center;
+}
+
+.account {
+  list-style: none;
+  margin-right: 70px;
+  margin-top: 12px;
+  display: flex;
+}
+
+.user {
+  padding: 10px;
+}
+
+.cart {
+  padding: 10px;
+}
+
+.clearfix {
+  display: block;
+  content: " ";
+  clear: both;
+}
+
 .snip1555 {
   font-family: 'Muli', Arial, sans-serif;
-  font-size: 18px;
+  font-size: 15px;
   letter-spacing: 1.5px;
   line-height: 1em;
   margin: 15px 40px;
@@ -76,19 +114,22 @@
      -o-transition-duration: 0.5s;
  }
 
-/*
-    Multicoloured Hover Variations
-*/
+.logo-footer {
+  font-family: 'Architects Daughter', cursive;
+}
 
  #social-fb:hover {
      color: #3B5998;
  }
+
  #social-tw:hover {
      color: #4099FF;
  }
+
  #social-gp:hover {
      color: #d34836;
  }
+
  #social-em:hover {
      color: #f39c12;
  }

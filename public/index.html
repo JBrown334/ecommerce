@@ -5,20 +5,35 @@
     <link rel="stylesheet" href="./style.css" media="screen" title="no title">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet">
     <title></title>
   </head>
   <body ng-controller="mainCtrl">
 
-    <div class="main-header">
-        <ul class="snip1555">
-      <li class="current"><a ui-sref="home" data-hover="Home">OLD FRIEND</a></li>
+    <div class="clearfix">
+      <a ui-sref="home"><div class="logo">OLD FRIEND</div></a>
+        <nav class="nav">
+          <ul class="snip1555">
+      <!-- <li class="current"><a ui-sref="home" data-hover="Home">OLD FRIEND</a></li> -->
       <!-- <li><a ui-sref="shop" data-hover="Shop">SHOP</a></li> -->
-      <li><a ui-sref="journal" data-hover="Journal">JOURNAL</a></li>
-      <li><a ui-sref="contact" data-hover="Contact">CONTACT</a></li>
-      <li><a ui-sref="rfi" data-hover="Custom Request">CUSTOM REQUEST</a></li>
+            <li><a ui-sref="journal" data-hover="Journal">JOURNAL</a></li>
+            <li><a ui-sref="contact" data-hover="Contact">CONTACT</a></li>
+            <li><a ui-sref="rfi" data-hover="Custom Request">CUSTOM REQUEST</a></li>
+            <!-- <li><i class="fa fa-shopping-cart" aria-hidden="true"></i> -->
+            </li>
         </ul>
-        <hr>
+        <ul class="account">
+          <li class="user"><i class="fa fa-user-circle" aria-hidden="true"></i></li>
+          <li class="cart"><i class="fa fa-shopping-cart" id="fa-shopping-cart" aria-hidden="true"></i></li>
+          <!-- <li><i class="fa fa-user-circle" aria-hidden="true"></i></li> -->
+       </ul>
+      </nav>
+
+
+
     </div>
+
+    <hr>
 
 
     <div ui-view></div>
@@ -28,12 +43,12 @@
       <div class="container">
     <hr>
         <div class="text-center center-block">
-            <p class="txt-railway">- OLD FRIEND POTTERY -</p>
+            <p class="logo-footer">- OLD FRIEND POTTERY -</p>
             <br />
-                <a href="https://www.facebook.com/bootsnipp"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
-	            <a href="https://twitter.com/bootsnipp"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
-	            <a href="https://plus.google.com/+Bootsnipp-page"><i id="social-gp" class="fa fa-google-plus-square fa-3x social"></i></a>
-	            <a href="mailto:bootsnipp@gmail.com"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a>
+                <a href="https://www.facebook.com"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
+	            <a href="https://twitter.com"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
+	            <a href="https://plus.google.com"><i id="social-gp" class="fa fa-google-plus-square fa-3x social"></i></a>
+	            <a href="mailto:joebrown28@gmail.com"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a>
         </div>
 
     </div>
@@ -44,6 +59,8 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.js"></script>
+
+  <script src="https://use.fontawesome.com/30fb1a5645.js"></script>
 
   <script src="./js/app.js" charset="utf-8"></script>
 
