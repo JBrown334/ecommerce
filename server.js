@@ -20,6 +20,8 @@ app.post('/api/rfi', controller.createRequest);
 app.get('/api/product/:id', controller.getProduct);
 app.get('/api/products', controller.getProducts);
 app.delete('/api/product/:id', controller.deleteProduct);
+// app.post('/api/cart', controller.addToCart);
+// app.delete('/api/cart', controller.removeFromCart);
 
 //admin endpoints
 app.post('/api/addproduct', controller.createProduct);

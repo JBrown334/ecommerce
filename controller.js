@@ -27,8 +27,6 @@ module.exports = {
 
   getProducts: function(req, res){
     db.read_products(function(err, products){
-      console.log(err);
-      console.log(products);
       res.status(200).send(products);
     });
   },
