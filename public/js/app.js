@@ -1,6 +1,6 @@
-angular.module('ecommerce', ['ui.router'])
+var app = angular.module('app', ['ui.router']);
 
-  .config(function($stateProvider, $urlRouterProvider){
+app.config(function($stateProvider, $urlRouterProvider){
 
     $stateProvider
 
@@ -25,9 +25,20 @@ angular.module('ecommerce', ['ui.router'])
         controller: 'productCtrl'
       })
 
+      .state('contact', {
+        url: '/contact',
+        templateUrl: '../views/contact.html'
+      })
+
       .state('shop', {
         url: '/shop',
         templateUrl: '../views/shop.html'
+      })
+
+      .state('admin', {
+        url: '/admin',
+        templateUrl: '../views/admin.html',
+        controller: 'adminCtrl'
       });
 
 

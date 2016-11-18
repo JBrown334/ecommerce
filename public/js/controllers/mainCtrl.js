@@ -1,5 +1,4 @@
-angular.module('ecommerce')
-  .controller('mainCtrl', function($scope, mainService){
+app.controller('mainCtrl', function($scope, mainService){
 
     $scope.createRequest = function(data){
       console.log(data);
@@ -9,17 +8,6 @@ angular.module('ecommerce')
       });
     };
 
-
-    $scope.createProduct = function(prod){
-      mainService.creatProduct(prod).then(function(response){
-        alert(response);
-      });
-    };
-
-  
-
-
-
     $scope.getProducts = function(){
       mainService.getProducts().then(function(response){
       $scope.products = response.data;
@@ -28,16 +16,8 @@ angular.module('ecommerce')
 
     $scope.getProducts();
 
-    $scope.updateProduct = function(){
-      mainService.updateProduct().then(function(response){
-      alert(response);
-    });
-  };
+  
 
-    $scope.deleteProduct = function(){
-      mainService.deleteProduct().then(function(response){
-      alert(response);
-    });
-  };
+
 
   });

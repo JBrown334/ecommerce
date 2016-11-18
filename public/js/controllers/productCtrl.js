@@ -1,5 +1,4 @@
-angular.module('ecommerce')
- .controller('productCtrl', function($scope, $stateParams, productService){
+app.controller('productCtrl', function($scope, $stateParams, productService){
 
    $scope.getProduct = function(){
      productService.getProduct($stateParams.id).then(function(response){

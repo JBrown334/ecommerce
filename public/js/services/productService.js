@@ -1,5 +1,4 @@
-angular.module('ecommerce')
-  .service('productService', function($http){
+app.service('productService', function($http){
 
     this.getProduct = function(id)  {
       return $http({
