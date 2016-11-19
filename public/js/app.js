@@ -32,7 +32,8 @@ app.config(function($stateProvider, $urlRouterProvider){
 
       .state('shop', {
         url: '/shop',
-        templateUrl: '../views/shop.html'
+        templateUrl: '../views/shop.html',
+        controller: 'cartCtrl'
       })
 
       .state('admin', {

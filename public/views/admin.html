@@ -1,17 +1,16 @@
 <div class="container">
 
-  <img ng-src="https://static.pexels.com/photos/34079/pexels-photo.jpg" class="img-responsive" />
 
-<div ng-repeat="product in products" class="col-sm-4">
+    <div ng-repeat="product in products" class="col-sm-4">
 
 
-  <a ui-sref="product({id: product.productid})">
-    <div>{{product.productname}}</div>
-  </a>
-  <a ui-sref="product({id: product.productid})">
-<img class="img-responsive" ng-src="{{product.productimage}}" />
-  </a>
-  <button type="button" name="button" ng-click="deleteProduct(product.productid)">Delete Product</button>
-</div>
+        <a ui-sref="product({id: product.productid})">
+            <div>{{product.productname}}</div>
+        </a>
+        <a ui-sref="product({id: product.productid})">
+            <img class="img-responsive" ng-src="{{product.productimage}}" />
+        </a>
+        <button type="button" name="button" ng-click="deleteProduct(product.productid)">Delete Product</button>
+    </div>
 
 </div>

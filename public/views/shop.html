@@ -1,1 +1,23 @@
-Futhamuckin dog
+<div class="products-cont row">
+    <div class="col-sm-7">
+        <div ng-repeat="product in products">
+            <a ui-sref="product({id: product.productid})">
+                <div class="product-name">{{product.productname}}</div>
+            </a>
+            <a ui-sref="product({id: product.productid})">
+                <img class="img-responsive box" ng-src="{{product.productimage}}" />
+            </a>
+            <div class="product-description">{{product.productdescription}} | Price | {{product.productprice}}</div>
+            <button type="button" name="button" class="button" ng-click="addToCart(product); caltTotal()">ADD TO CART</button>
+        </div>
+    </div>
+
+    <div class="col-sm-5 cart">
+        <h4 class="cart-qty">Shopping Cart | {{ cartQty}}</h4>
+        <div class="col-sm-2" ng-repeat="item in cart track by $index">
+            <img class="img-responsive" ng-src="{{item.productimage}}" />
+            <i ng-click="removeItem($index)" class="fa fa-minus" aria-hidden="true"></i>
+        </div>
+       {{total}}
+    </div>
+</div>
