@@ -18,10 +18,12 @@
   },
   "homepage": "https://github.com/JBrown334/ecommerce#readme",
   "dependencies": {
+    "angular-local-storage": "^0.5.0",
     "body-parser": "^1.15.2",
     "cors": "^2.8.1",
     "express": "^4.14.0",
     "express-sessions": "^1.0.6",
-    "massive": "^2.5.0"
+    "massive": "^2.5.0",
+    "npm": "^4.0.2"
   }
 }

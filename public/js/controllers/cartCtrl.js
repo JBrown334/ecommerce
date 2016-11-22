@@ -1,9 +1,11 @@
-app.controller('cartCtrl', function($scope, cartService, $stateParams){
+app.controller('cartCtrl', function($scope, localStorageService, cartService){
+
+
 
   $scope.cartQty = cartService.getCart().length;
 
   $scope.addToCart = function(product)  {
-    $scope.cartQty =   cartService.addToCart(product).length;
+    $scope.cartQty = cartService.addToCart(product).length;
   };
 
   $scope.removeItem = function(product)  {
@@ -15,6 +17,8 @@ app.controller('cartCtrl', function($scope, cartService, $stateParams){
   $scope.calcTotal = function(cart)  {
     $scope.total = cartService.calcTotal(cart)
   };
+
+
 
 
 

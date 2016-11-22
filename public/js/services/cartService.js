@@ -12,17 +12,19 @@ app.service('cartService', function(){
     return cart;
   };
 
+  this.getCart = function()  {
+    return cart;
+  };
+
   this.calcTotal = function(cart)  {
     var total = 0;
     for(var i = 0; i < cart.length; i++)  {
-      total += getCart().length * product.productprice;
+      total += cart[i].productprice;
     };
     console.log(total);
     return total;
   };
 
-  this.getCart = function()  {
-    return cart;
-  };
+
 
 });

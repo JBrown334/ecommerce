@@ -1,4 +1,4 @@
-var app = angular.module('app', ['ui.router']);
+var app = angular.module('app', ['ui.router', 'LocalStorageModule']);
 
 app.config(function($stateProvider, $urlRouterProvider){
 
@@ -51,4 +51,6 @@ app.config(function($stateProvider, $urlRouterProvider){
 
 
 
+  }).config(function(localStorageServiceProvider){
+    localStorageServiceProvider.setPrefix('app');
   });
