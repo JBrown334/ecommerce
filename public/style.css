@@ -51,7 +51,7 @@ a {
 
 .snip1555 {
   font-family: 'Muli', Arial, sans-serif;
-  font-size: 15px;
+  font-size: 17px;
   letter-spacing: 1.5px;
   line-height: 1em;
   margin: 15px 40px;
@@ -136,14 +136,50 @@ img {
             box-shadow: 0 10px 6px -6px #777;
 }
 
-button {
+/*button {
   padding: 5px;
-  display: block;
-  margin: auto;
+  font-size: 18px;
   border: none;
+  border-radius: 2px;
+  margin-left: 60px;
   color: #3d393d;
-  background: 
-}
+  background:
+}*/
+
+button {
+   border-top: 1px solid #96d1f8;
+   background: #57c7be;
+   background: -webkit-gradient(linear, left top, left bottom, from(#179187), to(#57c7be));
+   background: -webkit-linear-gradient(top, #179187, #57c7be);
+   background: -moz-linear-gradient(top, #179187, #57c7be);
+   background: -ms-linear-gradient(top, #179187, #57c7be);
+   background: -o-linear-gradient(top, #179187, #57c7be);
+   padding: 12px 24px;
+   -webkit-border-radius: 8px;
+   -moz-border-radius: 8px;
+   border-radius: 8px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: white;
+   font-size: 17px;
+   font-family: Helvetica, Arial, Sans-Serif;
+   text-decoration: none;
+   vertical-align: middle;
+   margin-left: 12px;
+   }
+
+button:hover {
+   border-top-color: #39bfb4;
+   background: #39bfb4;
+   color: #141314;
+   }
+
+button:active {
+   border-top-color: #1b435e;
+   background: #1b435e;
+   }
 
 .cart {
   margin-top: 24px;
@@ -182,4 +218,49 @@ hr {
 
 .product-det {
   float: right;
+}
+
+.journal {
+  margin: 180px;
+  font-size: 19px;
+  font-family: sans-serif;
+}
+
+#submit {
+  border-top: 1px solid #96d1f8;
+  background: #57c7be;
+  background: -webkit-gradient(linear, left top, left bottom, from(#179187), to(#57c7be));
+  background: -webkit-linear-gradient(top, #179187, #57c7be);
+  background: -moz-linear-gradient(top, #179187, #57c7be);
+  background: -ms-linear-gradient(top, #179187, #57c7be);
+  background: -o-linear-gradient(top, #179187, #57c7be);
+  padding: 12px 24px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+  -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+  box-shadow: rgba(0,0,0,1) 0 1px 0;
+  text-shadow: rgba(0,0,0,.4) 0 1px 0;
+  color: white;
+  font-size: 17px;
+  font-family: Helvetica, Arial, Sans-Serif;
+  text-decoration: none;
+  vertical-align: middle;
+  margin-left: 12px;
+}
+
+#submit:hover {
+  border-top-color: #39bfb4;
+  background: #39bfb4;
+  color: #141314;
+}
+
+#submit:active {
+  border-top-color: #1b435e;
+  background: #1b435e;
+}
+
+.request-form-name {
+  font-family: 'Architects Daughter', cursive;
 }

@@ -3,8 +3,6 @@ app.controller('mainCtrl', function($scope, mainService){
     $scope.createRequest = function(data){
       console.log(data);
       mainService.createRequest(data).then(function(response){
-        // console.log(response);
-        alert('Request Sent!');
       });
     };
 
@@ -16,7 +14,7 @@ app.controller('mainCtrl', function($scope, mainService){
 
     $scope.getProducts();
 
-  
+
 
 
 
