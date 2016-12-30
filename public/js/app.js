@@ -16,7 +16,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 
       .state('rfi', {
         url: '/customrequest',
-        templateUrl: '../views/rfi.html'
+        templateUrl: '../views/rfi.html',
       })
 
       .state('product', {
@@ -34,6 +34,12 @@ app.config(function($stateProvider, $urlRouterProvider){
         url: '/shop',
         templateUrl: '../views/shop.html',
         controller: 'cartCtrl'
+      })
+
+      .state('cart', {
+        url:'/cart',
+        templateURL: '../views/cart.html',
+        controller: 'cartCrtl'
       })
 
       .state('admin', {

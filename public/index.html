@@ -2,7 +2,7 @@
 <html ng-app="app">
 
 <head>
-    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./style.css" media="screen" title="no title">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Bungee+Inline" rel="stylesheet">
@@ -13,7 +13,36 @@
 
 <body ng-controller="mainCtrl">
 
-    <div class="clearfix">
+  <nav class="navbar navbar-inverse" role="navigation">
+    	  <div class="container">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-brand-centered">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <div class="navbar-brand navbar-brand-centered"><a ui-sref="home">OLD FRIEND POTTERY</a></div>
+		    </div>
+
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="navbar-brand-centered">
+		      <ul class="nav navbar-nav">
+		        <li><a ui-sref="shop">SHOP</a></li>
+		        <li><a ui-sref="journal">JOURNAL</a></li>
+		      </ul>
+		      <ul class="nav navbar-nav navbar-right">
+		        <li><a ui-sref="contact">CONTACT</a></li>
+		        <li><a ui-sref="rfi">CUSTOM REQUEST</a></li>
+            <li class="cart-icon"><a ui-sref="cart"><i class="fa fa-shopping-cart" id="fa-shopping-cart" aria-hidden="true"></i></a></li>
+		      </ul>
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</nav>
+
+
+    <!-- <div class="container">
         <a ui-sref="home">
             <div class="logo">OLD FRIEND POTTERY</div>
         </a>
@@ -26,18 +55,16 @@
                 </li>
             </ul>
             <ul class="account">
-                <li class="user"><i class="fa fa-coffee" aria-hidden="true"></i></i>
-                </li>
+                <a ui-sref="cart">
                 <li class="cart-icon"><i class="fa fa-shopping-cart" id="fa-shopping-cart" aria-hidden="true"></i></li>
+              </a>
             </ul>
         </nav>
-    </div>
+    </div> -->
 
     <div ui-view></div>
 
-    <div class="footer">
-        - OLD FRIEND POTTERY -
-    </div>
+
 
     <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>

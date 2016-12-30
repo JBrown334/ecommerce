@@ -1,34 +1,16 @@
-<div class="products-cont row">
-    <div class="col-sm-7">
-        <div ng-repeat="product in products">
-            <a ui-sref="product({id: product.productid})">
-                <h5 class="product-name">{{product.productname}}</h5>
-            </a>
-            <a ui-sref="product({id: product.productid})">
-                <img class="img-responsive box" ng-src="{{product.productimage}}" />
-            </a>
-            <div>
-              <p>
-                {{product.productdescription}}
-              </p>
 
-            </div>
-            <button type="button" name="button" class="button" onclick="sweetAlert('Sweet!', 'Item added to cart', 'success');" ng-click="addToCart(product); calcTotal(cart)">ADD TO CART</button>
-        </div>
-    </div>
+<h2>Sets and Individual Pieces</h2>
+<div class="container-fluid">
+   <div class="col-sm-4 thumbnail" ng-repeat="product in products">
 
-    <div class="col-sm-5 cart">
-        <div class="cart-qty">{{cartQty}} Items</div>
-        <div class="cart-total">Total {{total}}</div>
-    </div>
-    <hr>
-    <div class="cart-items-container" ng-repeat="item in cart track by $index">
-        <img class="cart-image" ng-src="{{item.productimage}}" />
-        <i ng-click="removeItem($index); calcTotal(cart)" class="fa fa-minus" aria-hidden="true"></i>
-    </div>
+     <a ui-sref="product({ id:product.productid })">
+       <img ng-src="{{product.productimage}}">
+       </a>
 
+       <div class="caption">
+         <p>{{ product.productdescription }}</p>
+         <button type="button" name="button" class="button" onclick="sweetAlert('Hot Coffee!', 'Item added to cart', 'success');" ng-click="addToCart(product); calcTotal(cart)">ADD TO CART</button>
+       </div>
 
-
-
-</div>
-</div>
+   </div>
+ </div>

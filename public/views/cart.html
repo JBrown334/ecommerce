@@ -1,0 +1,8 @@
+<div class="cart">
+    <div class="cart-qty">Cart {{cartQty}} Items</div>
+    <div class="cart-total">Total {{total}}</div>
+</div>
+<div class="cart-items-container" ng-repeat="item in cart track by $index">
+    <img class="cart-image" ng-src="{{item.productimage}}" />
+    <i ng-click="removeItem($index); calcTotal(cart)" class="fa fa-minus" aria-hidden="true"></i>
+</div>

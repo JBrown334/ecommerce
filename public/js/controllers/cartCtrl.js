@@ -1,8 +1,8 @@
-app.controller('cartCtrl', function($scope, localStorageService, cartService){
+app.controller('cartCtrl', function($scope, cartService){
 
 
 
-  $scope.cartQty = cartService.getCart().length;
+$scope.cartQty = cartService.getCart().length;
 
   $scope.addToCart = function(product)  {
     $scope.cartQty = cartService.addToCart(product).length;

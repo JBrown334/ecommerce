@@ -1,6 +1,6 @@
 <div class="container">
 
-
+<h3>ADMINISTRATIVE TOOLS</h3>
     <div ng-repeat="product in products" class="col-sm-4">
 
 
@@ -10,7 +10,7 @@
         <a ui-sref="product({id: product.productid})">
             <img class="img-responsive" ng-src="{{product.productimage}}" />
         </a>
-        <button type="button" name="button" ng-click="deleteProduct(product.productid)">Delete Product</button>
+        <button class="delete" type="button" name="button" ng-click="deleteProduct(product.productid)">Delete Product</button>
     </div>
 
 </div>
